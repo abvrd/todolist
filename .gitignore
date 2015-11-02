@@ -13,7 +13,7 @@ client/npm-debug.log
 /server/bin/*
 !serverbin/console
 !server/bin/symfony_requirements
-/server/vendor/*
+/server/vendor/
 
 # Cache and logs (Symfony2)
 server/app/cache/*

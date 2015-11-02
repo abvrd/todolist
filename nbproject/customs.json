@@ -1,0 +1,17 @@
+{
+    "elements": {
+        "md-card": {},
+        "md-icon": {},
+        "md-input-container": {},
+        "md-content": {},
+        "md-card-content": {}
+    },
+    "attributes": {
+        "layout": {
+            "context": "div"
+        },
+        "layout-margin": {
+            "context": "section"
+        }
+    }
+}

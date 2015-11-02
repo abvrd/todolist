@@ -1,0 +1,8 @@
+task : 
+    type: rest
+    resource: "PocApiBundle:Task"
+    name_prefix: api_
+category : 
+    type: rest
+    resource: "PocApiBundle:Category"
+    name_prefix: api_

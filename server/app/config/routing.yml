@@ -1,7 +1,0 @@
-poc_api:
-    resource: "@PocApiBundle/Resources/config/routing.yml"
-    prefix:   /api
-    type: rest
-NelmioApiDocBundle:
-    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
-    prefix:   /api/doc

@@ -115,16 +115,16 @@ class CategoryController extends Controller {
      *   }
      * )
      *
+     * @param int $id
      * @param ParamFetcher $paramFetcher Paramfetcher
      *
-     * @RequestParam(name="id", nullable=false, strict=true, description="id.")
      * @RequestParam(name="label", nullable=false, strict=true, description="Label.")
      * @RequestParam(name="description", nullable=true, strict=true, description="Description.")
      * @RequestParam(name="color", nullable=true, strict=true, description="Color.")
      *
      * @return View
      */
-    public function putCategoryAction(ParamFetcher $paramFetcher) {
+    public function putCategoryAction($id, ParamFetcher $paramFetcher) {
         //$id = $paramFetcher->get('id')
 
         $view = View::create();
@@ -144,11 +144,11 @@ class CategoryController extends Controller {
      *   }
      * )
      *
-     * @param int $cat id
+     * @param int $id id
      *
      * @return View
      */
-    public function deleteCategoryAction($cat) {
+    public function deleteCategoryAction($id) {
 
         $view = View::create();
         $view->setData('')->setStatusCode(200);

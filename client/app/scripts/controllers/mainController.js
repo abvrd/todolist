@@ -40,8 +40,8 @@ angular.module('todolistApp').controller('MainCtrl', function ($scope, $interval
     };
 
     //tasks list
-    $scope.tasks = Task.query({}, function (res) {
-        _.forEach($scope.tasks, function (value, idx) {
+    $scope.tasks = Task.query({}, function () {
+        _.forEach($scope.tasks, function (value) {
             if (value.done !== undefined && value.done !== '') {
                 //old tasks
                 value = _.merge(value, {enabled: false, deleted: true, visible: false});
@@ -95,8 +95,9 @@ angular.module('todolistApp').controller('MainCtrl', function ($scope, $interval
         }
         //clearing enabled status
         _.forEach($scope.tasks, function (value) {
-            if (value.id !== item.id)
+            if (value.id !== item.id) {
                 value.enabled = false;
+            }
         });
         item.enabled = !item.enabled;
     };
@@ -123,13 +124,13 @@ angular.module('todolistApp').controller('MainCtrl', function ($scope, $interval
         }
     };
 
-    $scope.updateTask = function (task) {
+    //$scope.updateTask = function (task) {
         //task.$update();
-    };
+    //};
 
-    $scope.deleteTask = function (task) {
+    //$scope.deleteTask = function (task) {
         //task.$delete();
-    };
+    //};
 
     $scope.deleteTasks = function () {
         _.forEach($scope.tasks, function (value) {

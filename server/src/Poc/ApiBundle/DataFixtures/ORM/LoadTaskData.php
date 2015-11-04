@@ -49,13 +49,47 @@ class LoadTaskData implements FixtureInterface {
         $manager->persist($cat6);
         $manager->flush();
         
+        $cat7 = new Category();
+        $cat7->setLabel('professionnal');
+        $cat7->setColor('#FFD600');
+        $manager->persist($cat7);
+        $manager->flush();
+        
         $task = new Task();
         $task->setLabel('Développement projet Todo list');
         $task->setDescription('Dev');
         $task->setDate(new \DateTime('now'));
+        $task->setDone(new \DateTime('now'));
         $task->addCategory($cat);
 
         $manager->persist($task);
+        $manager->flush();
+        
+        $task2 = new Task();
+        $task2->setLabel('Hire a new developer');
+        $task2->setDescription('Have a look at http://site.arnaudbouvard.com');
+        $task2->setDate(new \DateTime('now'));
+        $task2->addCategory($cat2);
+        
+        $manager->persist($task2);
+        $manager->flush();
+        
+        $task3 = new Task();
+        $task3->setLabel('Call the bank');
+        $task3->setDescription('Review my different products.');
+        $task3->setDate(new \DateTime('now'));
+        $task3->addCategory($cat3);
+
+        $manager->persist($task3);
+        $manager->flush();
+        
+        $task4 = new Task();
+        $task4->setLabel('Rdv with customer Carmichael');
+        $task4->setDescription('Present new software modules.');
+        $task4->setDate(new \DateTime('now'));
+        $task4->addCategory($cat7);
+
+        $manager->persist($task4);
         $manager->flush();
     }
 

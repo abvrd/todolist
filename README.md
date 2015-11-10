@@ -2,6 +2,8 @@
 
 A simple Front/API interface for handling daily tasks. [demo](http://todo.arnaudbouvard.com).
 
+Angular, Angular Material, Grunt, PHP, Symfony2, FOSRestBundle, NelmioApiDocBundle
+
 Installation
 ------------
 For client section
